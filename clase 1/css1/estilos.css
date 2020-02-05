@@ -1,0 +1,300 @@
+.btn-bar-top button{
+	color: #505152;
+}
+.btn-bar-top button:focus{
+	box-shadow: none !important;
+	color:#505152 !important;
+}
+.btn-bar-top button:hover{
+	background: #f8f9fa !important;
+	color: #505152;
+}
+.bar-top{
+	left: -40% !important;
+}
+.dropdown-toggle::after{
+box-shadow: none;
+}
+.login{
+	position: absolute;
+	display: inline;
+	right: 50px;
+	top: 20px;
+}
+#check{
+ display:none;
+}
+
+#icone{
+ cursor:pointer;
+ padding:15px;
+ position:absolute;
+ z-index:2;
+
+}
+
+.barra{
+ background-color:#3c576b;
+ height: 60em;
+ width:250px;
+ position:absolute;
+ transition:all .1s linear;
+ left:-300px;
+ z-index: 1;
+}
+nav{
+ width:100%;
+ position:absolute;
+ top:20px;
+  
+}
+.barra nav ul{
+	list-style: none;
+	color: #fff;
+}
+.barra nav ul li{
+	font-size: 14px;
+}
+.barra nav ul li a{
+ text-decoration:none;
+ color: #fff;
+ font-size: 12px;
+}
+.barra nav ul li a:hover{
+ color: #ccc;
+}
+
+.barra nav ul hr{
+	margin: 10px 0px;
+}
+/*.link{
+ background-color:#494950;
+ padding:20px;
+ font-family:"arial";
+ font-size:12pt;
+ transition:all .2s linear;
+ color:#f4f4f9;
+ border-bottom:2px solid #222;
+ opacity:0px;
+ margin-top:10px;
+}
+
+.link:hover{
+ background-color:#050542;
+}*/
+
+#check:checked ~ .barra{
+ transform:translateX(300px);
+}
+ 
+#check:checked ~ .barra nav a .link{
+ opacity:1px;
+ margin-top:0px;
+ transition-delay:.2s;
+}
+  
+  /*###################################################*/
+/*********** foto y portada *************/
+.proveedorPortada{
+	 height: 200px;
+	 padding: 50px;
+}
+.proveedorPortada:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.4);
+}
+.proveedorLogo,  .foto-ec{
+	border: 1px solid #ddd;
+    border-radius: 50px;
+    background: #fff;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+    text-align: center;
+}
+.cont-ec {
+	height: 230px;
+}
+/********* proveedor empresas colaboradoras********/
+.colaboracion  ul{
+	list-style: none;
+}
+.colaboracion ul li{
+	max-width: 250px;
+	text-decoration: none;
+}
+.foto-ec img{
+	overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+/********* Disponibilidad Calendario Proveeedores **********/
+.wrapper {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+}
+
+/*button::-moz-focus-inner { 
+  border: 0;
+  padding: 0;
+}*/
+
+#calendari {
+    margin: 20px 0;
+    position: relative;
+    overflow: hidden;
+    height: 389px;
+    width: 90%;
+    font-size: 14px;
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.4);
+}
+#calendari table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+}
+#calendari table.actiu {
+    transform: translateX(0px)top;
+}
+#calendari table.inactiu {
+    transition: all 0.3s 0.01s ease;
+}
+#calendari table.amagat-esquerra {
+    transform: translateX(-299px);
+}
+#calendaritable.amagat-dreta {
+    transform: translateX(300px);
+}
+#calendari td,th {
+    text-align: center;
+    background-color: #fff;
+}
+#calendari th {
+    padding: 10px;
+}
+#calendari tr:first-child th {
+    font-size: 20px;
+    font-weight: bold;
+    border-left: none;
+    border-top: none;
+}
+#calendari td:last-child, #calendari th:last-child {
+  border-right: none;
+}
+
+#calendari th {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    background-color: #d0396cf0;
+    color: #fff;
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
+    font-weight: normal;
+}
+#calendari th .any {
+    font-size: 20px;
+    font-weight: normal;
+    display: block;
+    text-shadow: none;
+    color: #fff;
+    font-weight: bold;
+}
+#calendari tr:nth-child(2) th {
+    padding: 5px;
+}
+#calendari td {
+    padding: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+#calendari td>span {
+    color: #555;
+    padding: 10px;
+    display: block;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+#calendari td:nth-child(even)>span {
+    background-color: rgba(0,0,0,0.02);
+}
+#calendari td:last-child>span,
+#calendari td:nth-child(6)>span {
+    color: #555;
+}
+#calendari td.avui>span {
+    font-weight: bold;
+    /*background-color:;*/
+    color: #d24474;
+    border-radius: 100PX;
+    border: 2px solid rgba(0,0,0,0.1);
+}
+#calendari td.fora > span {
+    opacity: 0.2;
+}
+#calendari td > span:hover {
+    background: #aaa;
+    color: #fff;
+}
+#calendari .boto-next, .boto-prev {
+    background: rgba(0,0,0,0.1);
+    color: #fff;
+    font-family: inherit;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: inherit;
+    padding: 2px 10px 5px 10px;
+    line-height: 1px;
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+    border-radius: 100%;
+    position: absolute;
+    top: 15px;
+}
+#calendari .boto-next { right: 10px; padding:0px;}
+#calendari .boto-prev { left: 10px; padding:0px;}
+#calendari .boto-next:hover,
+#calendari .boto-prev:hover {
+    background: rgba(0,0,0,0.2);
+}
+#calendari button:hover { cursor: pointer; }
+#calendari button:focus { outline: none; }
+/********menu***********/
+
+.dropd-menu .show{
+	left: -30px !important;
+	}
+
+@media(min-width: 480px){
+	.dropd-menu .show{
+	left: -100% !important;
+	}
+}
+
+.btn:focus, .btn.focus{
+	box-shadow: none;
+}
+/******************Foto de la galeria ********************/
+@media (max-width: 579px){
+	.img-galeria-p{
+		height: auto !important;
+}
+}
+
+
+  /*####################################################*/
